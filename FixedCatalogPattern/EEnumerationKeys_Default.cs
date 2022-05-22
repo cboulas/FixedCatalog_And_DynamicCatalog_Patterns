@@ -10,21 +10,14 @@ namespace FixedCatalogPattern
     {
         public static object GetDefaultValue(EEnumerationKeys key)
         {
-            switch (key)
+            return new Dictionary<EEnumerationKeys, string>()
             {
-                case EEnumerationKeys.Key1:
-                    return "1st Key";
-                case EEnumerationKeys.Key2:
-                    return "2nd Key";
-                case EEnumerationKeys.Key3:
-                    return "3rd Key";
-                case EEnumerationKeys.Key4:
-                    return "4th Key";
-                case EEnumerationKeys.Key5:
-                    return "5th Key";
-            }
-
-            throw new ArgumentException("'key' was not exists in enumeration");
+                { EEnumerationKeys.Key1, "1st Key" },
+                { EEnumerationKeys.Key2, "2nd Key" },
+                { EEnumerationKeys.Key3, "3rd Key" },
+                { EEnumerationKeys.Key4, "4th Key" },
+                { EEnumerationKeys.Key5, "5th Key" }
+            }[key];
         }
     }
 }

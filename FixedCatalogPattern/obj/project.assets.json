@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "CatalogPatternInterfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CatalogPatternInterfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CatalogPatternInterfaces.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CatalogPatternInterfaces/1.0.0": {
+      "type": "project",
+      "path": "../CatalogPatternInterface/CatalogPatternInterfaces.csproj",
+      "msbuildProject": "../CatalogPatternInterface/CatalogPatternInterfaces.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "CatalogPatternInterfaces >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Christophe\\.nuget\\packages\\": {},
@@ -15,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Profiles\\Christophe\\Workspace\\FixedCatalog_And_DynamicCatalog_Patterns\\FixedCatalogPattern\\FixedCatalogPattern.csproj",
+      "projectUniqueName": "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\FixedCatalogPattern\\FixedCatalogPattern.csproj",
       "projectName": "FixedCatalogPattern",
-      "projectPath": "D:\\Profiles\\Christophe\\Workspace\\FixedCatalog_And_DynamicCatalog_Patterns\\FixedCatalogPattern\\FixedCatalogPattern.csproj",
+      "projectPath": "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\FixedCatalogPattern\\FixedCatalogPattern.csproj",
       "packagesPath": "C:\\Users\\Christophe\\.nuget\\packages\\",
-      "outputPath": "D:\\Profiles\\Christophe\\Workspace\\FixedCatalog_And_DynamicCatalog_Patterns\\FixedCatalogPattern\\obj\\",
+      "outputPath": "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\FixedCatalogPattern\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -41,7 +60,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\CatalogPatternInterface\\CatalogPatternInterfaces.csproj": {
+              "projectPath": "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\CatalogPatternInterface\\CatalogPatternInterfaces.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

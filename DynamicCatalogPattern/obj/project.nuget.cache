@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wVUuHAx6JWotmwbhHZMYtNKf2nSX5j0akS/nzPMRfJU9Zc7kJXaxXY8GDQ9JbLaVm0G9mB+mmSt/Sw5yDwApXw==",
+  "dgSpecHash": "vTfbMF4XNXIW3MiIU5PFg3GLGfQKgpgqBqByfFNVB3hXsox7k0r5tap87D6hrP2jsOTk5ZALOVGD8dyoGG7vVQ==",
   "success": true,
-  "projectFilePath": "D:\\Profiles\\Christophe\\Workspace\\FixedCatalog_And_DynamicCatalog_Patterns\\DynamicCatalogPattern\\DynamicCatalogPattern.csproj",
+  "projectFilePath": "D:\\Profiles\\Christophe\\Workspace\\fixedcatalog_and_dynamiccatalog_patterns\\DynamicCatalogPattern\\DynamicCatalogPattern.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

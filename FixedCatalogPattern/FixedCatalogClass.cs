@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CatalogPatternInterfaces;
 
 namespace FixedCatalogPattern
 {
-    public class FixedCatalogClass
+    public class FixedCatalogClass<T>
     {
-        private Dictionary<EEnumerationKeys, object> keyValuePairs =
-            new Dictionary<EEnumerationKeys, object>();
+        private Dictionary<T, object> keyValuePairs =
+            new Dictionary<T, object>();
 
-        private IStorage? storage { get; init; }
+        private IStorage<T>? storage { get; init; }
 
-        public FixedCatalogClass(IStorage _storage = null)
+        public FixedCatalogClass(IStorage<T> _storage = null)
         {
             storage = _storage;
 
@@ -23,18 +24,17 @@ namespace FixedCatalogPattern
                 return;
             }
 
-            foreach (string key in Enum.GetNames(typeof(EEnumerationKeys)))
+            foreach (string key in Enum.GetNames(typeof(T)))
             {
-                EEnumerationKeys keyParsed =
-                    (EEnumerationKeys)Enum.Parse(typeof(EEnumerationKeys), key, true);
-
                 keyValuePairs.Add(
-                    keyParsed,
-                    EEnumerationKeys_Default.GetDefaultValue(keyParsed));
+                    (T)Enum.Parse(typeof(T), key, true),
+                    EEnumerationKeys_Default.GetDefaultValue(
+                        (EEnumerationKeys)Enum.Parse(
+                            typeof(T), key, true)));
             }
         }
 
-        public object Get(EEnumerationKeys key)
+        public object Get(T key)
         {
             if (!keyValuePairs.ContainsKey(key))
                 throw new Exception("'key' in argument was not find");
@@ -42,7 +42,7 @@ namespace FixedCatalogPattern
             return keyValuePairs[key];
         }
 
-        public bool Set(EEnumerationKeys key, object value)
+        public bool Set(T key, object value)
         {
             if (!keyValuePairs.ContainsKey(key))
                 throw new Exception("'key' in argument was not find");

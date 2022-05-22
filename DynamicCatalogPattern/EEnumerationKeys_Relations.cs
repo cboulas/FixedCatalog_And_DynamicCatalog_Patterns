@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DynamicCatalogPattern
 {
-    public static class EEnumerationKeys_Relations
+    public static class EEnumerationKeys_Relations<T>
     {
-        public static string Get(EEnumerationKeys key)
+        public static string Get(T key)
         {
             // Sample 1
             return key.ToString(); // for example

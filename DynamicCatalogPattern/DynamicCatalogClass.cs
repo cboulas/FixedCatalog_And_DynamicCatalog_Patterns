@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CatalogPatternInterfaces;
 
 namespace DynamicCatalogPattern
 {
-    public class DynamicCatalogClass
+    public class DynamicCatalogClass<T>
     {
         private Dictionary<string, object> keyValuePairs =
             new Dictionary<string, object>();
 
-        private IStorage? storage { get; init; }
+        private IStorage<string>? storage { get; init; }
 
-        public DynamicCatalogClass(IStorage _storage = null)
+        public DynamicCatalogClass(IStorage<string> _storage = null)
         {
             storage = _storage;
 
@@ -25,13 +26,19 @@ namespace DynamicCatalogPattern
 
             foreach (string key in Enum.GetNames(typeof(EEnumerationKeys)))
             {
-                EEnumerationKeys keyParsed =
-                    (EEnumerationKeys)Enum.Parse(typeof(EEnumerationKeys), key, true);
-
                 keyValuePairs.Add(
-                    EEnumerationKeys_Relations.Get(keyParsed),
-                    EEnumerationKeys_Default.GetDefaultValue(keyParsed));
+                    key,
+                    EEnumerationKeys_Default.GetDefaultValue(
+                        (EEnumerationKeys)Enum.Parse(
+                            typeof(T), key, true)));
             }
+        }
+
+        public object Get(T key)
+        {
+            if (key == null) throw new ArgumentNullException(nameof(key));
+
+            return Get(EEnumerationKeys_Relations<T>.Get(key));
         }
 
         public object Get(string key)
@@ -40,6 +47,11 @@ namespace DynamicCatalogPattern
                 throw new Exception("'key' in argument was not find");
 
             return keyValuePairs[key];
+        }
+
+        public bool Set(T key, object value, bool autoAdd = true)
+        {
+            return Set(EEnumerationKeys_Relations<T>.Get(key), value, autoAdd);
         }
 
         public bool Set(string key, object value, bool autoAdd = true)

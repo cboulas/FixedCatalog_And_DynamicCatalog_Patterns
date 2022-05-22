@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixedCatalogPattern", "FixedCatalogPattern\FixedCatalogPattern.csproj", "{6E2CDC2F-8E70-44A4-B9D2-98BB8B33AFEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixedCatalogPattern", "FixedCatalogPattern\FixedCatalogPattern.csproj", "{6E2CDC2F-8E70-44A4-B9D2-98BB8B33AFEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicCatalogPattern", "DynamicCatalogPattern\DynamicCatalogPattern.csproj", "{88B16134-1ACA-4C79-A536-56694DE2E4B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicCatalogPattern", "DynamicCatalogPattern\DynamicCatalogPattern.csproj", "{88B16134-1ACA-4C79-A536-56694DE2E4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCatalogPattern", "ConsoleCatalogPattern\ConsoleCatalogPattern.csproj", "{33B247BF-D9DE-44B4-A950-A21291BE9FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogPatternInterfaces", "CatalogPatternInterface\CatalogPatternInterfaces.csproj", "{77502D9C-7D14-4CA6-A0DB-0FA9F52AC587}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{88B16134-1ACA-4C79-A536-56694DE2E4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88B16134-1ACA-4C79-A536-56694DE2E4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88B16134-1ACA-4C79-A536-56694DE2E4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B247BF-D9DE-44B4-A950-A21291BE9FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B247BF-D9DE-44B4-A950-A21291BE9FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B247BF-D9DE-44B4-A950-A21291BE9FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B247BF-D9DE-44B4-A950-A21291BE9FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77502D9C-7D14-4CA6-A0DB-0FA9F52AC587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77502D9C-7D14-4CA6-A0DB-0FA9F52AC587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77502D9C-7D14-4CA6-A0DB-0FA9F52AC587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77502D9C-7D14-4CA6-A0DB-0FA9F52AC587}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,17 @@
       "ProjectGuid": "88b16134-1aca-4c79-a536-56694de2e4b7",
       "DisplayName": "DynamicCatalogPattern",
       "ColorIndex": 1
+    },
+    "33b247bf-d9de-44b4-a950-a21291be9fd0": {
+      "ProjectGuid": "33b247bf-d9de-44b4-a950-a21291be9fd0",
+      "DisplayName": "ConsoleCatalogPattern",
+      "ColorIndex": 2
+    },
+    "77502d9c-7d14-4ca6-a0db-0fa9f52ac587": {
+      "ProjectGuid": "77502d9c-7d14-4ca6-a0db-0fa9f52ac587",
+      "DisplayName": "CatalogPatternInterfaces",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }
